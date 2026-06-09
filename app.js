@@ -194,3 +194,13 @@ toggleMapButton.addEventListener("click", () => {
     }, 100);
   }
 });
+
+function sendClubFinderHeight() {
+  window.parent.postMessage({
+    type: "clubFinderResize",
+    height: document.documentElement.scrollHeight
+  }, "*");
+}
+
+window.addEventListener("load", sendClubFinderHeight);
+window.addEventListener("resize", sendClubFinderHeight);
