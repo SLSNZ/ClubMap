@@ -179,3 +179,13 @@ Promise.all([
     console.error(error);
     showError("The club finder data could not be loaded. Check that clubs.json and caps.json are in the same folder as index.html.");
   });
+const clubFinder = document.getElementById("clubFinder");
+const toggleMapButton = document.getElementById("toggleMapButton");
+
+toggleMapButton.addEventListener("click", () => {
+  clubFinder.classList.toggle("map-collapsed");
+
+  toggleMapButton.textContent = clubFinder.classList.contains("map-collapsed")
+    ? "Show map"
+    : "Hide map";
+});
