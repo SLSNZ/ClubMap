@@ -179,3 +179,7 @@ Promise.all([
     console.error(error);
     showError("The club finder data could not be loaded. Check that clubs.json and caps.json are in the same folder as index.html.");
   });
+
+if (window.self === window.top) {
+  document.body.classList.add("standalone");
+}
