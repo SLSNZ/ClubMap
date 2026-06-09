@@ -9,6 +9,7 @@
 </head>
 <body>
 <main class="club-finder" id="clubFinder">
+<main class="club-finder" id="clubFinder">
   <section class="header">
     <div>
       <h1>SLSNZ Club Finder</h1>
@@ -20,25 +21,18 @@
     </button>
   </section>
 
-  <div id="mapContent">
-    <section class="controls">
-      <div class="search-wrap">
-        <input id="searchBox" type="search" placeholder="Search by club name..." autocomplete="off" />
-      </div>
-      <button id="resetButton" type="button" class="secondary">Reset map</button>
-    </section>
+  <section class="controls">
+    <div class="search-wrap">
+      <input id="searchBox" type="search" placeholder="Search by club name..." autocomplete="off" />
+    </div>
+    <button id="resetButton" type="button" class="secondary">Reset map</button>
+  </section>
 
-    <section class="layout">
-      <aside class="sidebar">
-        <div id="resultsHeader" class="results-header"></div>
-        <ul id="clubList" class="club-list"></ul>
-      </aside>
-      <div id="map"></div>
-    </section>
-  </div>
+  <section class="layout">
+    <aside class="sidebar">
+      <div id="resultsHeader" class="results-header"></div>
+      <ul id="clubList" class="club-list"></ul>
+    </aside>
+    <div id="map"></div>
+  </section>
 </main>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
