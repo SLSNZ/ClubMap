@@ -233,8 +233,6 @@ button:hover { filter: brightness(0.95); }
     min-height: 420px;
   }
 
-  .header h1 { font-size: 22px; }
-}
 .header {
   display: flex;
   justify-content: space-between;
@@ -253,6 +251,7 @@ button:hover { filter: brightness(0.95); }
   white-space: nowrap;
 }
 
-.club-finder.map-collapsed #mapContent {
+.club-finder.map-collapsed .controls,
+.club-finder.map-collapsed .layout {
   display: none;
 }
