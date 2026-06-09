@@ -1,0 +1,2 @@
+# ClubMap
+SLSNZ Club Map
