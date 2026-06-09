@@ -8,12 +8,19 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="club-finder">
-    <section class="header">
+<main class="club-finder" id="clubFinder">
+  <section class="header">
+    <div>
       <h1>SLSNZ Club Finder</h1>
       <p>Search for a surf lifesaving club.</p>
-    </section>
+    </div>
 
+    <button id="toggleMapButton" type="button" class="toggle-map">
+      Hide map
+    </button>
+  </section>
+
+  <div id="mapContent">
     <section class="controls">
       <div class="search-wrap">
         <input id="searchBox" type="search" placeholder="Search by club name..." autocomplete="off" />
@@ -28,7 +35,8 @@
       </aside>
       <div id="map"></div>
     </section>
-  </main>
+  </div>
+</main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="app.js"></script>
