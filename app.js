@@ -185,7 +185,12 @@ const toggleMapButton = document.getElementById("toggleMapButton");
 toggleMapButton.addEventListener("click", () => {
   clubFinder.classList.toggle("map-collapsed");
 
-  toggleMapButton.textContent = clubFinder.classList.contains("map-collapsed")
-    ? "Show map"
-    : "Hide map";
+  const isCollapsed = clubFinder.classList.contains("map-collapsed");
+  toggleMapButton.textContent = isCollapsed ? "Show map" : "Hide map";
+
+  if (!isCollapsed && typeof map !== "undefined") {
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 100);
+  }
 });
