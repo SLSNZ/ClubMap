@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SLSNZ Club Finder</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="club-finder">
+    <section class="header">
+      <h1>SLSNZ Club Finder</h1>
+      <p>Search for a surf lifesaving club.</p>
+    </section>
+
+    <section class="controls">
+      <div class="search-wrap">
+        <input id="searchBox" type="search" placeholder="Search by club name..." autocomplete="off" />
+      </div>
+      <button id="resetButton" type="button" class="secondary">Reset map</button>
+    </section>
+
+    <section class="layout">
+      <aside class="sidebar">
+        <div id="resultsHeader" class="results-header"></div>
+        <ul id="clubList" class="club-list"></ul>
+      </aside>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
