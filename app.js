@@ -179,32 +179,3 @@ Promise.all([
     console.error(error);
     showError("The club finder data could not be loaded. Check that clubs.json and caps.json are in the same folder as index.html.");
   });
-const clubFinder = document.getElementById("clubFinder");
-const toggleMapButton = document.getElementById("toggleMapButton");
-
-toggleMapButton.addEventListener("click", () => {
-  clubFinder.classList.toggle("map-collapsed");
-
-  const isCollapsed = clubFinder.classList.contains("map-collapsed");
-
-  toggleMapButton.textContent = isCollapsed ? "Show map" : "Hide map";
-
-  if (!isCollapsed && typeof map !== "undefined") {
-    setTimeout(() => {
-      map.invalidateSize();
-      sendClubFinderHeight();
-    }, 100);
-  } else {
-    setTimeout(sendClubFinderHeight, 100);
-  }
-});
-
-function sendClubFinderHeight() {
-  window.parent.postMessage({
-    type: "clubFinderResize",
-    height: document.documentElement.scrollHeight
-  }, "*");
-}
-
-window.addEventListener("load", sendClubFinderHeight);
-window.addEventListener("resize", sendClubFinderHeight);
