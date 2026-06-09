@@ -235,3 +235,24 @@ button:hover { filter: brightness(0.95); }
 
   .header h1 { font-size: 22px; }
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toggle-map {
+  background: #ffffff;
+  color: #005eb8;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.club-finder.map-collapsed #mapContent {
+  display: none;
+}
